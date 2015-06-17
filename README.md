@@ -1,3 +1,31 @@
+## cob_perception_common (indigo) - 0.6.6-0
+
+The packages in the `cob_perception_common` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --rosdistro indigo --track indigo cob_perception_common` on `Wed, 17 Jun 2015 11:27:30 -0000`
+
+These packages were released:
+- `cob_cam3d_throttle`
+- `cob_image_flip`
+- `cob_object_detection_msgs`
+- `cob_object_detection_visualizer`
+- `cob_perception_common`
+- `cob_perception_msgs`
+- `cob_vision_utils`
+
+Version of package(s) in repository `cob_perception_common`:
+- upstream repository: https://github.com/ipa320/cob_perception_common.git
+- release repository: https://github.com/ipa320/cob_perception_common-release.git
+- rosdistro version: `0.6.5-0`
+- old version: `0.6.5-0`
+- new version: `0.6.6-0`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.8`
+- rosdep version: `0.11.2`
+- rosdistro version: `0.4.2`
+- vcstools version: `0.1.36`
+
+
 ## cob_perception_common (indigo) - 0.6.5-0
 
 The packages in the `cob_perception_common` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --rosdistro indigo --track indigo cob_perception_common` on `Wed, 17 Jun 2015 10:44:34 -0000`
