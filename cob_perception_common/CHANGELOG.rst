@@ -2,6 +2,9 @@
 Changelog for package cob_perception_common
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.6 (2015-06-17)
+------------------
+
 0.6.5 (2015-06-17)
 ------------------
 * increase version number
