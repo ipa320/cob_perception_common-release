@@ -2,13 +2,14 @@ cmake_minimum_required(VERSION 2.8.3)
 project(cob_object_detection_visualizer)
 
 # set default build type
-IF(NOT CMAKE_BUILD_TYPE)
-    SET(CMAKE_BUILD_TYPE Release) # RelWithDebInfo)
-ENDIF(NOT CMAKE_BUILD_TYPE)
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release) # RelWithDebInfo)
+endif(NOT CMAKE_BUILD_TYPE)
 
-set(catkin_RUN_PACKAGES # all ROS packages from package.xml (libopencv-dev is system dependency --> sudo apt-get install)
-  roscpp
+# all ROS packages from package.xml (libopencv-dev is system dependency --> sudo apt-get install)
+set(catkin_RUN_PACKAGES 
   cob_object_detection_msgs
+  roscpp
   visualization_msgs
 )
 
@@ -116,20 +117,9 @@ include_directories(
 	${catkin_INCLUDE_DIRS} # same name as find_package
 )
 
-## Declare a cpp library
-# add_library(cob_object_detection_visualizer
-#   src/${PROJECT_NAME}/cob_object_detection_visualizer.cpp
-# )
-
 ## Declare a cpp executable
-# add_executable(cob_object_detection_visualizer_node src/cob_object_detection_visualizer_node.cpp)
 add_executable(cob_object_detection_visualizer ros/src/object_detection_visualizer_node.cpp)
-
-## Add cmake target dependencies of the executable/library
-## as an example, message headers may need to be generated before nodes
-add_dependencies(cob_object_detection_visualizer cob_object_detection_msgs_generate_messages_cpp)
-
-## Specify libraries to link a library or executable target against
+add_dependencies(cob_object_detection_visualizer ${catkin_EXPORTED_TARGETS} ${PROJECT_NAME}_generate_messages_cpp)
 target_link_libraries(cob_object_detection_visualizer
   ${catkin_LIBRARIES}
 )
@@ -148,12 +138,12 @@ target_link_libraries(cob_object_detection_visualizer
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 
-## Mark executables and/or libraries for installation
-# install(TARGETS cob_object_detection_visualizer cob_object_detection_visualizer_node
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+# Mark executables and/or libraries for installation
+install(TARGETS cob_object_detection_visualizer
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
