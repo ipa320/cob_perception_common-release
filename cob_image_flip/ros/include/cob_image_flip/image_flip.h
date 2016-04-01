@@ -59,6 +59,7 @@
 // ROS message includes
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/PointCloud2.h>
+#include <stereo_msgs/DisparityImage.h>
 #include <tf/transform_listener.h>
 
 // topics
@@ -89,23 +90,27 @@ protected:
 	int rotation_mode_;				// rotation mode (0=fixed angle as defined  by rotation_angle, 1=automatic upright rotation against gravity using reference coordinate frame with upwards directed z-axis, 2=as 1 but image rotation only in 90deg steps -> faster)
 	double rotation_angle_;			// image rotation [in deg] (especially efficient with 0, 90, 180, 270 deg)
 	std::string reference_frame_;	// reference world coordinate frame with z-axis pointing upwards (= against gravity direction)
-	std::string camera_frame_;		// camera coordinate frame (image coordinate system with x-axis to the right, y-axis downwards, z-axis into viewing direction of the camera)
+//	std::string camera_frame_;		// camera coordinate frame (image coordinate system with x-axis to the right, y-axis downwards, z-axis into viewing direction of the camera)
 	bool flip_color_image_;			// flip color image
 	bool flip_pointcloud_;			// flip point cloud (usually unnecessary because tf takes care of this with original point cloud)
-	std::string pointcloud_data_format_;	// point cloud data format (xyz or xyzrgb)
+	bool flip_disparity_image_;		// flip disparity image
 	bool display_warnings_;			// display warning if transformation not available
 	bool display_timing_;			// display timing information
 
 	double last_rotation_angle_;
 
+	// subscriber counters
 	unsigned int img_sub_counter_;
 	unsigned int pc_sub_counter_;
+	unsigned int disparity_sub_counter_;
 
-	ros::Subscriber point_cloud_sub_;	///< Point cloud input topic
-	ros::Publisher point_cloud_pub_;	///< Point cloud output topic
+	ros::Subscriber point_cloud_sub_;	///< point cloud input topic
+	ros::Publisher point_cloud_pub_;	///< point cloud output topic
 	image_transport::ImageTransport* it_;
-	image_transport::SubscriberFilter color_camera_image_sub_;	///< Color camera image input topic
-	image_transport::Publisher color_camera_image_pub_;			///< Color camera image output topic
+	image_transport::SubscriberFilter color_camera_image_sub_;	///< color camera image input topic
+	image_transport::Publisher color_camera_image_pub_;			///< color camera image output topic
+	ros::Subscriber disparity_image_sub_;	///< disparity image input topic
+	ros::Publisher disparity_image_pub_;	///< disparity image output topic
 
 	tf::TransformListener transform_listener_;
 
@@ -119,7 +124,10 @@ public:
 
 	~ImageFlip();
 
-	bool convertColorImageMessageToMat(const sensor_msgs::Image::ConstPtr& color_image_msg, cv_bridge::CvImageConstPtr& color_image_ptr, cv::Mat& color_image);
+	double determineRotationAngle(const std::string& camera_frame_id, const ros::Time& time);
+
+	bool convertImageMessageToMat(const sensor_msgs::Image::ConstPtr& color_image_msg, cv_bridge::CvImageConstPtr& color_image_ptr, cv::Mat& color_image);//, const sensor_msgs::image_encodings image_encoding = sensor_msgs::image_encodings::TYPE_32FC1);
+
 
 	void imageCallback(const sensor_msgs::ImageConstPtr& color_image_msg);
 
@@ -127,12 +135,19 @@ public:
 
 	void imgDisconnectCB(const image_transport::SingleSubscriberPublisher& pub);
 
-	template <typename T>
+
 	void pcCallback(const sensor_msgs::PointCloud2::ConstPtr& point_cloud_msg);
 
 	void pcConnectCB(const ros::SingleSubscriberPublisher& pub);
 
 	void pcDisconnectCB(const ros::SingleSubscriberPublisher& pub);
+
+
+	void disparityCallback(const stereo_msgs::DisparityImage::ConstPtr& disparity_image_msg);
+
+	void disparityConnectCB(const ros::SingleSubscriberPublisher& pub);
+
+	void disparityDisconnectCB(const ros::SingleSubscriberPublisher& pub);
 };
 
 }
