@@ -2,20 +2,21 @@
 Changelog for package cob_3d_mapping_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.6.7 (2016-04-01)
+0.6.9 (2017-07-18)
 ------------------
-* cleanup and format2
-* move cob_3d_mapping_msgs to cob_perception_common
+* manually fix changelog
 * Contributors: ipa-fxm
 
 0.6.8 (2016-10-10)
 ------------------
 * added missing messages
-* 0.6.7
-* update changelog
+* Contributors: Richard Bormann
+
+0.6.7 (2016-04-01)
+------------------
 * cleanup and format2
 * move cob_3d_mapping_msgs to cob_perception_common
-* Contributors: Richard Bormann, ipa-fxm
+* Contributors: ipa-fxm
 
 0.6.6 (2015-06-17 13:24)
 ------------------------
