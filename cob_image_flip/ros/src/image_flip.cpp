@@ -59,7 +59,7 @@
 namespace cob_image_flip
 {
 ImageFlip::ImageFlip(ros::NodeHandle nh)
-: 	node_handle_(nh), img_sub_counter_(0), pc_sub_counter_(0), disparity_sub_counter_(0), transform_listener_(nh), it_(0), last_rotation_angle_(0)
+: 	node_handle_(nh), img_sub_counter_(0), pc_sub_counter_(0), disparity_sub_counter_(0), transform_listener_(nh), it_(0), last_rotation_angle_(0), last_rotation_factor_(0)
 {
 	// set parameters
 	ROS_DEBUG_STREAM("\n--------------------------\nImage Flip Parameters:\n--------------------------");
@@ -140,8 +140,48 @@ double ImageFlip::determineRotationAngle(const std::string& camera_frame_id, con
 			transform_listener_.waitForTransform(reference_frame_, camera_frame_id, x_axis_camera.stamp_, ros::Duration(0.2));
 			transform_listener_.transformVector(reference_frame_, x_axis_camera, x_axis_ref);
 			transform_listener_.transformVector(reference_frame_, y_axis_camera, y_axis_ref);
- 			int factor = (y_axis_ref.z()<0. ? 1 : -1);
-			rotation_angle = 180./CV_PI * atan2(-x_axis_ref.z(), factor*sqrt(x_axis_ref.x()*x_axis_ref.x() + x_axis_ref.y()*x_axis_ref.y()));
+			// compute the rotation angle so that the x-axis of the rotated image has 0 z-coordinate in the reference coordinate system (i.e. x-axis of rotated image is then parallel to the ground)
+			// the rotation is around the z-axis of the camera system
+			// 1. Compute the intersection between
+			//    E_1: x-y-plane in reference system coordinates: z=0
+			//    E_2: x-y-plane of camera system (but without translation, just the rotational part): [x,y,z] = [0,0,0] + r*[x_axis_ref.x,x_axis_ref.y,x_axis_ref.z] + s*[y_axis_ref.x,y_axis_ref.y,y_axis_ref.z]
+			//    --> r = -s*y_axis_ref.z/x_axis_ref.z
+			//    --> line equation: x = s*[y_axis_ref.x-x_axis_ref.x*y_axis_ref.z/x_axis_ref.z,y_axis_ref.y-x_axis_ref.y*y_axis_ref.z/x_axis_ref.z,0]
+			// 2. Compute the target camera x-axis, which is parallel to the ground. The vector for x is given by the line equation, the direction of the target y-axis decides about the direction (+ or -).
+			// 3. Compute the rotation between camera x-axis and target camera x-axis (i.e. between x_axis_ref and x_axis_target)
+			if (x_axis_ref.z()!=0)		// do not compute a rotation if the camera's x-axis is already correctly aligned
+			{
+				// 1. line intersection
+				const double a = y_axis_ref.z()/x_axis_ref.z();
+				tf::Vector3 x_axis_target(y_axis_ref.x()-x_axis_ref.x()*a,y_axis_ref.y()-x_axis_ref.y()*a, 0);		// this is the line of intersection
+				x_axis_target.normalize();
+				// 2. resolve direction ambiguity
+				tf::Vector3 z_axis_target = x_axis_ref.cross(y_axis_ref);	// remark: z_axis_ref == z_axis_target
+				tf::Vector3 y_axis_target = z_axis_target.cross(x_axis_target);
+				y_axis_target.normalize();
+
+				//std::cout << "\n\nx_axis_ref=" << x_axis_ref.x() << ", " << x_axis_ref.y() << ", " << x_axis_ref.z()
+				//		<< "\ny_axis_ref=" << y_axis_ref.x() << ", " << y_axis_ref.y() << ", " << y_axis_ref.z()
+				//		<< "\nx_axis_target=" << x_axis_target.x() << ", " << x_axis_target.y() << ", " << x_axis_target.z()
+				//		<< "\ny_axis_target=" << y_axis_target.x() << ", " << y_axis_target.y() << ", " << y_axis_target.z() << "\n" << std::endl;
+
+				// compute a factor than rotates the image in a way that the new y-axis in the rotated image directs against the z-direction of the reference system (i.e. points downwards)
+				int factor = (y_axis_target.z()<0. ? 1 : -1);
+				if (factor != last_rotation_factor_ && fabs(y_axis_target.z()) < 0.01)		// this hysteresis stops continuous flipping near 0
+					factor = last_rotation_factor_;
+				last_rotation_factor_ = factor;
+				x_axis_target *= factor;
+
+				//std::cout << "x_axis_target factored=" << x_axis_target.x() << ", " << x_axis_target.y() << ", " << x_axis_target.z() << "\n" << std::endl;
+
+				// 3. compute angle
+				tf::Vector3 rot_axis_x = x_axis_ref.cross(x_axis_target);
+				double rot_sin = ((rot_axis_x.dot(z_axis_target)) >= 0 ? 1 : -1) * rot_axis_x.length();		// sign of sin() depends on alignment of cross-product rotation axis with z-axis
+				double rot_cos = x_axis_ref.dot(x_axis_target);
+				rotation_angle = -180./CV_PI * atan2(rot_sin, rot_cos);
+
+				//std::cout << "rot_sin=" << rot_sin << "\trot_cos=" << rot_cos << "\trotation_angle=" << rotation_angle << "\n=========================================\n" << std::endl;
+			}
 			if (rotation_mode_ == AUTOMATIC_GRAVITY_DIRECTION_90)
 				rotation_angle = 90. * cvRound(rotation_angle*1./90.);
 			last_rotation_angle_ = rotation_angle;
@@ -156,7 +196,7 @@ double ImageFlip::determineRotationAngle(const std::string& camera_frame_id, con
 		catch (tf2::TransformException& ex)
 		{
 			if (display_warnings_ == true)
-				ROS_WARN("%s",ex.what());
+				ROS_DEBUG("%s",ex.what());
 			rotation_angle = last_rotation_angle_;
 		}
 	}
