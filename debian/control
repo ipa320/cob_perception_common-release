@@ -1,0 +1,12 @@
+Source: ros-indigo-cob-3d-mapping-msgs
+Section: misc
+Priority: extra
+Maintainer: Joshua Hampp <joshua.hampp@ipa.fhg.de>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-actionlib, ros-indigo-actionlib-msgs, ros-indigo-catkin, ros-indigo-cob-object-detection-msgs, ros-indigo-geometry-msgs, ros-indigo-message-generation, ros-indigo-sensor-msgs, ros-indigo-std-msgs
+Homepage: http://wiki.ros.org/cob_3d_mapping_msgs
+Standards-Version: 3.9.2
+
+Package: ros-indigo-cob-3d-mapping-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-actionlib, ros-indigo-actionlib-msgs, ros-indigo-cob-object-detection-msgs, ros-indigo-geometry-msgs, ros-indigo-message-runtime, ros-indigo-sensor-msgs, ros-indigo-std-msgs
+Description: Message, service and action definitions for environment perception.
