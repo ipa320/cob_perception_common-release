@@ -2,6 +2,9 @@
 Changelog for package cob_vision_utils
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.10 (2017-07-20)
+-------------------
+
 0.6.9 (2017-07-18)
 ------------------
 * Softkinetic DS 325 integration (`#77 <https://github.com/ipa320/cob_perception_common/issues/77>`_)
