@@ -1,0 +1,115 @@
+ros-kinetic-cob-3d-mapping-msgs (0.6.11-0jessie) jessie; urgency=high
+
+  * Merge remote-tracking branch 'origin/indigo_release_candidate' into indigo_dev
+  * use license apache 2.0
+  * Contributors: ipa-fxm, ipa-uhr-mk
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Sat, 06 Jan 2018 23:00:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.10-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Wed, 19 Jul 2017 22:00:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.9-0jessie) jessie; urgency=high
+
+  * manually fix changelog
+  * Contributors: ipa-fxm
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Mon, 17 Jul 2017 22:00:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.8-0jessie) jessie; urgency=high
+
+  * added missing messages
+  * Contributors: Richard Bormann
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Sun, 09 Oct 2016 22:00:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.7-0jessie) jessie; urgency=high
+
+  * cleanup and format2
+  * move cob_3d_mapping_msgs to cob_perception_common
+  * Contributors: ipa-fxm
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Thu, 31 Mar 2016 22:00:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.6-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Wed, 17 Jun 2015 11:24:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.5-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Wed, 17 Jun 2015 10:41:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.4-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Tue, 16 Sep 2014 22:00:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.3-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Mon, 08 Sep 2014 16:17:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.2-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Mon, 01 Sep 2014 15:59:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.1-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Thu, 28 Aug 2014 10:57:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.6.0-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Thu, 28 Aug 2014 09:37:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.5.12-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Mon, 08 Sep 2014 11:31:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.5.11-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Mon, 01 Sep 2014 15:58:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.5.10-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Thu, 28 Aug 2014 22:00:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.5.6-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Thu, 28 Aug 2014 09:27:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.5.5-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Mon, 25 Aug 2014 22:00:00 -0000
+
+ros-kinetic-cob-3d-mapping-msgs (0.5.4-0jessie) jessie; urgency=high
+
+
+
+ -- Joshua Hampp <joshua.hampp@ipa.fhg.de>  Sun, 24 Aug 2014 22:00:00 -0000
+
+
