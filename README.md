@@ -1,3 +1,35 @@
+## cob_perception_common (melodic) - 0.6.15-1
+
+The packages in the `cob_perception_common` repository were released into the `melodic` distro by running `/usr/bin/bloom-release cob_perception_common --rosdistro melodic` on `Wed, 18 Mar 2020 13:23:01 -0000`
+
+These packages were released:
+- `cob_3d_mapping_msgs`
+- `cob_cam3d_throttle`
+- `cob_image_flip`
+- `cob_object_detection_msgs`
+- `cob_object_detection_visualizer`
+- `cob_perception_common`
+- `cob_perception_msgs`
+- `cob_vision_utils`
+- `ipa_3d_fov_visualization`
+
+Version of package(s) in repository `cob_perception_common`:
+
+- upstream repository: https://github.com/ipa320/cob_perception_common.git
+- release repository: https://github.com/ipa320/cob_perception_common-release.git
+- rosdistro version: `0.6.14-1`
+- old version: `0.6.14-1`
+- new version: `0.6.15-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.3`
+- catkin_pkg version: `0.4.16`
+- rosdep version: `0.18.0`
+- rosdistro version: `0.8.0`
+- vcstools version: `0.1.42`
+
+
 ## cob_perception_common (kinetic) - 0.6.15-1
 
 The packages in the `cob_perception_common` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release cob_perception_common --rosdistro kinetic` on `Wed, 18 Mar 2020 13:10:34 -0000`
