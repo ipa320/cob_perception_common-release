@@ -1,0 +1,12 @@
+Source: ros-kinetic-ipa-3d-fov-visualization
+Section: misc
+Priority: optional
+Maintainer: Florenz Graf <florenz.graf@ipa.fraunhofer.de>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-cv-bridge, ros-kinetic-image-geometry, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-visualization-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-ipa-3d-fov-visualization
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-cv-bridge, ros-kinetic-image-geometry, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-visualization-msgs
+Description: The ipa_3d_fov_visualization package allows to visualize the field-of-view of a camera.
