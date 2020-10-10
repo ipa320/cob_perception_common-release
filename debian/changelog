@@ -1,0 +1,171 @@
+ros-melodic-cob-object-detection-visualizer (0.6.16-1bionic) bionic; urgency=high
+
+  * Merge pull request #101 <https://github.com/ipa320/cob_perception_common/issues/101> from fmessmer/test_noetic
+    test noetic
+  * reduce dependencies
+  * Bump CMake version to avoid CMP0048 warning
+  * Contributors: Felix Messmer, fmessmer
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Fri, 09 Oct 2020 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.15-1bionic) bionic; urgency=high
+
+  * Merge pull request #99 <https://github.com/ipa320/cob_perception_common/issues/99> from fmessmer/ci_updates
+    [travis] ci updates
+  * fix cmake warning
+  * catkin_lint fixes
+  * Contributors: Felix Messmer, fmessmer
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Tue, 17 Mar 2020 23:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.14-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Mon, 05 Aug 2019 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.13-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Wed, 13 Mar 2019 23:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.12-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Fri, 20 Jul 2018 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.11-1bionic) bionic; urgency=high
+
+  * Merge remote-tracking branch 'origin/indigo_release_candidate' into indigo_dev
+  * Merge pull request #83 <https://github.com/ipa320/cob_perception_common/issues/83> from ipa-rmb/indigo_dev
+    fixed typo in package.xml
+  * fixed typo in package.xml
+  * use license apache 2.0
+  * Merge pull request #82 <https://github.com/ipa320/cob_perception_common/issues/82> from ipa-rmb/indigo_dev
+    bugfix for a warning
+  * bugfix for a warning
+  * Contributors: Richard Bormann, ipa-fxm, ipa-uhr-mk
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Sat, 06 Jan 2018 23:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.10-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Wed, 19 Jul 2017 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.9-1bionic) bionic; urgency=high
+
+  * remove obsolete dependencies to cmake_modules
+  * opencv3 compatibility
+  * manually fix changelog
+  * Contributors: ipa-fxm
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Mon, 17 Jul 2017 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.8-1bionic) bionic; urgency=high
+
+  * object detection visualization working
+  * added an image based visualization function for object detection messages
+  * working on image display of detections
+  * Contributors: Richard Bormann
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Sun, 09 Oct 2016 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.7-1bionic) bionic; urgency=high
+
+  * fix remaining issues from #54 <https://github.com/ipa320/cob_perception_common/issues/54>
+  * conversion to package format 2
+  * added wait for transform because of non-flipping bug
+  * Merge branch 'indigo_dev' of github.com:ipa320/cob_perception_common into indigo_dev
+  * catkin_lint
+  * hopefully corrected dependencies to message generation
+  * Contributors: Richard Bormann, ipa-fmw, ipa-fxm
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Thu, 31 Mar 2016 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.6-1bionic) bionic; urgency=high
+
+  * fix maintainer
+  * Contributors: Florian Weisshardt
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Tue, 16 Jun 2015 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.5-1bionic) bionic; urgency=high
+
+  * missing dependencies to message generation
+  * fix dependencies
+  * added a visualization program for cob_object_detection_msgs::DetectionArray messages, displays as a MarkerArray in Rviz
+  * Contributors: Richard Bormann, ipa-fmw, ipa-fxm
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Tue, 16 Jun 2015 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.4-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Tue, 16 Sep 2014 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.3-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Mon, 08 Sep 2014 16:17:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.2-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Mon, 01 Sep 2014 15:59:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.1-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Thu, 28 Aug 2014 10:57:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.6.0-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Thu, 28 Aug 2014 09:37:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.5.12-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Mon, 08 Sep 2014 11:31:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.5.11-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Mon, 01 Sep 2014 15:58:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.5.10-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Thu, 28 Aug 2014 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.5.6-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Thu, 28 Aug 2014 09:27:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.5.5-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Mon, 25 Aug 2014 22:00:00 -0000
+
+ros-melodic-cob-object-detection-visualizer (0.5.4-1bionic) bionic; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Sun, 24 Aug 2014 22:00:00 -0000
+
+
