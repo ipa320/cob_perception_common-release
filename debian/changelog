@@ -1,0 +1,243 @@
+ros-noetic-cob-image-flip (0.6.16-1buster) buster; urgency=high
+
+  * Merge pull request #101 <https://github.com/ipa320/cob_perception_common/issues/101> from fmessmer/test_noetic
+    test noetic
+  * reduce dependencies
+  * Bump CMake version to avoid CMP0048 warning
+  * Contributors: Felix Messmer, fmessmer
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Fri, 09 Oct 2020 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.15-1buster) buster; urgency=high
+
+  * Merge pull request #99 <https://github.com/ipa320/cob_perception_common/issues/99> from fmessmer/ci_updates
+    [travis] ci updates
+  * catkin_lint fixes
+  * Merge pull request #98 <https://github.com/ipa320/cob_perception_common/issues/98> from fmessmer/fix/boost_signals
+    removed unused Boost signals dependency
+  * removed unused Boost signals dependency
+  * Contributors: Felix Messmer, fmessmer
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Tue, 17 Mar 2020 23:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.14-1buster) buster; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Mon, 05 Aug 2019 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.13-1buster) buster; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Wed, 13 Mar 2019 23:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.12-1buster) buster; urgency=high
+
+  * fixed opencv include names (#90 <https://github.com/ipa320/cob_perception_common/issues/90>)
+    fixed opencv include names
+  * Contributors: Richard Bormann
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Fri, 20 Jul 2018 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.11-1buster) buster; urgency=high
+
+  * Merge remote-tracking branch 'origin/indigo_release_candidate' into indigo_dev
+  * Merge pull request #87 <https://github.com/ipa320/cob_perception_common/issues/87> from ipa-fxm/fix/depend_pluginlib
+    add missing dependency
+  * add missing dependency
+  * Merge pull request #86 <https://github.com/ipa320/cob_perception_common/issues/86> from mikaelarguedas/patch-1
+    update to use non deprecated pluginlib macro
+  * update to use non deprecated pluginlib macro
+  * use license apache 2.0
+  * Contributors: Mikael Arguedas, Richard Bormann, ipa-fxm, ipa-uhr-mk
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Sat, 06 Jan 2018 23:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.10-1buster) buster; urgency=high
+
+  * removed unnecessary cmake_modules in CMakeLists
+  * Contributors: Richard Bormann
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Wed, 19 Jul 2017 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.9-1buster) buster; urgency=high
+
+  * remove obsolete dependencies to cmake_modules
+  * manually fix changelog
+  * reduce console logs
+  * comment std out
+  * fixed a direction sign bug with sin() in gravity mode
+  * fixed upside down rotation bug in gravity mode
+  * 180deg flip for gravity mode
+  * fixed image flip rotation against gravity
+  * Contributors: Richard Bormann, ipa-cob4-1, ipa-fxm, msh
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Mon, 17 Jul 2017 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.8-1buster) buster; urgency=high
+
+  * added publisher to image flip for providing the inverse inplane rotation to subscribers to the upright image
+  * Merge branch 'indigo_dev' of github.com:ipa320/cob_perception_common into indigo_dev
+  * Contributors: Richard Bormann
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Sun, 09 Oct 2016 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.7-1buster) buster; urgency=high
+
+  * added the possibility to turn DisparityImages
+  * fix remaining issues from #54 <https://github.com/ipa320/cob_perception_common/issues/54>
+  * removing dependency to message_generation because no messages are generated in this package
+  * conversion to package format 2
+  * removed an obsolete parameter
+  * added point cloud rotation, i.e. the rotation of the ordered indexing matrix of the point cloud data
+  * added wait for transform because of non-flipping bug
+  * added standard output on point cloud flip
+  * hopefully corrected dependencies to message generation
+  * Contributors: Florian Weisshardt, Richard Bormann, ipa-fmw
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Thu, 31 Mar 2016 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.6-1buster) buster; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Tue, 16 Jun 2015 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.5-1buster) buster; urgency=high
+
+  * unify version number
+  * changed version number
+  * updated changelog
+  * complete revision of cob_image_flip, simple configuration from yaml file, rotaation modi: fixed angle and automatic angle determination from tf with option to round rotation in 90 deg steps
+  * Merge branch 'indigo_dev' of github.com:ipa320/cob_perception_common into 320-indigo_dev
+  * cleaning up
+  * added a visualization program for cob_object_detection_msgs::DetectionArray messages, displays as a MarkerArray in Rviz
+  * catkinizing
+  * catkinizing
+  * Contributors: Florian Weisshardt, Richard Bormann, rmb-om
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Tue, 16 Jun 2015 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.4-1buster) buster; urgency=high
+
+  * 0.5.12
+  * update changelog
+  * cleanup changelog
+  * 0.5.11
+  * update changelog
+  * Contributors: Florian Weisshardt
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Tue, 16 Sep 2014 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.3-1buster) buster; urgency=high
+
+
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Sun, 07 Sep 2014 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.2-1buster) buster; urgency=high
+
+  * Update package.xml
+  * increase version number for indigo
+  * 0.5.10
+  * update changelog
+  * downgrade version for hydro
+  * using opencv2 instead of libopencv-dev for hydro version (should not be merged into indigo)
+  * Contributors: Florian Weisshardt
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Sun, 31 Aug 2014 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.1-1buster) buster; urgency=high
+
+  * Merge branch 'indigo_dev' into indigo_release_candidate
+  * fix wrong opencv dep - again
+  * Contributors: Florian Weisshardt
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Wed, 27 Aug 2014 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.6.0-1buster) buster; urgency=high
+
+  * 0.5.6
+  * 0.5.5
+  * update changelog
+  * missing install tags
+  * 0.5.5
+  * Merge pull request #26 <https://github.com/ipa320/cob_perception_common/issues/26> from ipa320/hydro_dev
+    updates from hydro_dev
+  * update changelog
+  * fix wrong opencv dep
+  * Contributors: Alexander Bubeck, Florian Weisshardt, ipa-fxm
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Wed, 27 Aug 2014 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.5.10-1buster) buster; urgency=high
+
+  * downgrade version for hydro
+  * using opencv2 instead of libopencv-dev for hydro version (should not be merged into indigo)
+  * 0.6.1
+  * update changelog
+  * Merge branch 'indigo_dev' into indigo_release_candidate
+  * fix wrong opencv dep - again
+  * 0.6.0
+  * update changelog
+  * 0.5.5
+  * Merge pull request #26 <https://github.com/ipa320/cob_perception_common/issues/26> from ipa320/hydro_dev
+    updates from hydro_dev
+  * update changelog
+  * fix wrong opencv dep
+  * Contributors: Alexander Bubeck, Florian Weisshardt
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Thu, 28 Aug 2014 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.5.5-1buster) buster; urgency=high
+
+  * missing install tags
+  * Contributors: ipa-fxm
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Wed, 27 Aug 2014 22:00:00 -0000
+
+ros-noetic-cob-image-flip (0.5.4-1buster) buster; urgency=high
+
+  * unify version number
+  * update changelog
+  * merge conflict, undo changes
+  * Missing dependencies and fixed error image_flip.launch
+  * merge from rmb
+  * added possibilities to manually command 90, 180, 270 deg image rotation
+  * merge with latest rmb changes
+  * merge with latest changes from rmb
+  * catkin adaptation
+  * pcl_conversionsupdated
+  * link PCL_LIBRARIES to targets
+  * include PCL as system dependency. Avoids build error on first catkin_make
+  * fixes for hydro
+  * fix include dirs
+  * catkinize cob_image_flip, not working due to dependency to cob_perception_utils
+  * convert stack to metapackge, ignore all pacakges within for now
+  * working on groovy transition
+  * added connect/disconnect callbacks
+  * add arg for nodelet manager
+  * uses arg instead of env variable for robot
+  * point cloud is not flipped by default now
+  * added boost signals link for nodelet version
+  * search for bugs
+  * link against boost::signals
+    this is required to compile under fuerte
+  * parametrized display output
+  * added nodelet
+  * further timing statistics
+  * added timing measurements to image_flip
+  * added parameters, now provides pointcloud and image flip
+  * adding parameters to image_flip
+  * modifications for robot usage
+  * added an image flip component to image_flip
+  * updated cob_image_flip to flip PointCloud2 mit XYZRGB data type
+  * changed license
+  * fixed problems, function tested
+  * moved kinect image flip from cob_camera_sensors to cob_image_flip
+  * Contributors: Florian Weisshardt, Martin Günther, Richard Bormann, Srinivas Kerekare, ipa-fmw, ipa-goa, ipa-mig, ipa-nhg, rmb
+
+ -- Richard Bormann <richard.bormann@ipa.fraunhofer.de>  Sun, 24 Aug 2014 22:00:00 -0000
+
+
