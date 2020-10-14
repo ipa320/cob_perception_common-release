@@ -1,0 +1,12 @@
+Source: ros-kinetic-cob-image-flip
+Section: misc
+Priority: optional
+Maintainer: Richard Bormann <richard.bormann@ipa.fraunhofer.de>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-cob-perception-msgs, ros-kinetic-cv-bridge, ros-kinetic-geometry-msgs, ros-kinetic-image-transport, ros-kinetic-nodelet, ros-kinetic-pcl-conversions, ros-kinetic-pcl-ros, ros-kinetic-pluginlib, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-stereo-msgs, ros-kinetic-tf
+Homepage: http://wiki.ros.org/cob_image_flip
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-cob-image-flip
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-cob-perception-msgs, ros-kinetic-cv-bridge, ros-kinetic-geometry-msgs, ros-kinetic-image-transport, ros-kinetic-nodelet, ros-kinetic-pcl-conversions, ros-kinetic-pcl-ros, ros-kinetic-pluginlib, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-stereo-msgs, ros-kinetic-tf
+Description: Flips the image of Care-O-bots kinect in dependence of the viewing direction of the cameras to receive an upright image all the time.
