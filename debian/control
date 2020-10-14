@@ -1,0 +1,12 @@
+Source: ros-kinetic-cob-vision-utils
+Section: misc
+Priority: optional
+Maintainer: Richard Bormann <rmb@ipa.fhg.de>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-cv-bridge, ros-kinetic-roscpp, ros-kinetic-visualization-msgs
+Homepage: http://wiki.ros.org/cob_vision_utils
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-cob-vision-utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-cv-bridge, ros-kinetic-roscpp, ros-kinetic-visualization-msgs
+Description: Contains utilities used within the object detection tool chain.
