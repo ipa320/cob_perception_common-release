@@ -1,3 +1,35 @@
+## cob_perception_common (noetic) - 0.6.18-1
+
+The packages in the `cob_perception_common` repository were released into the `noetic` distro by running `/usr/bin/bloom-release cob_perception_common --rosdistro noetic` on `Thu, 23 Dec 2021 09:59:57 -0000`
+
+These packages were released:
+- `cob_3d_mapping_msgs`
+- `cob_cam3d_throttle`
+- `cob_image_flip`
+- `cob_object_detection_msgs`
+- `cob_object_detection_visualizer`
+- `cob_perception_common`
+- `cob_perception_msgs`
+- `cob_vision_utils`
+- `ipa_3d_fov_visualization`
+
+Version of package(s) in repository `cob_perception_common`:
+
+- upstream repository: https://github.com/ipa320/cob_perception_common.git
+- release repository: https://github.com/ipa320/cob_perception_common-release.git
+- rosdistro version: `0.6.17-1`
+- old version: `0.6.17-1`
+- new version: `0.6.18-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.24`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## cob_perception_common (noetic) - 0.6.17-1
 
 The packages in the `cob_perception_common` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --ros-distro noetic cob_perception_common` on `Wed, 14 Oct 2020 08:25:24 -0000`
