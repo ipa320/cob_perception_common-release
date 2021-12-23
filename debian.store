@@ -1,1 +1,1 @@
-{"trim": "", "base": "023e497", "trimbase": "", "parent": "debian/noetic/cob_perception_common", "previous": "4d0c0d5"}
+{"base": "a50b0ba8", "parent": "debian/noetic/cob_perception_common", "previous": "e3ff839c", "trim": "", "trimbase": ""}
