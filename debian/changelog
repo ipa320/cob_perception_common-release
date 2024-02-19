@@ -1,0 +1,198 @@
+ros-noetic-cob-perception-msgs (0.6.20-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Sun, 18 Feb 2024 23:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.19-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Thu, 28 Jul 2022 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.18-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Sun, 09 May 2021 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.17-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Tue, 13 Oct 2020 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.16-1focal) focal; urgency=high
+
+  * Merge pull request #101 <https://github.com/ipa320/cob_perception_common/issues/101> from fmessmer/test_noetic
+    test noetic
+  * Bump CMake version to avoid CMP0048 warning
+  * Contributors: Felix Messmer, fmessmer
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Fri, 09 Oct 2020 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.15-1focal) focal; urgency=high
+
+  * Merge pull request #99 <https://github.com/ipa320/cob_perception_common/issues/99> from fmessmer/ci_updates
+    [travis] ci updates
+  * catkin_lint fixes
+  * Contributors: Felix Messmer, fmessmer
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Tue, 17 Mar 2020 23:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.14-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Mon, 05 Aug 2019 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.13-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Wed, 13 Mar 2019 23:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.12-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Fri, 20 Jul 2018 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.11-1focal) focal; urgency=high
+
+  * Merge remote-tracking branch 'origin/indigo_release_candidate' into indigo_dev
+  * use license apache 2.0
+  * Contributors: ipa-fxm, ipa-uhr-mk
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Sat, 06 Jan 2018 23:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.10-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Wed, 19 Jul 2017 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.9-1focal) focal; urgency=high
+
+  * manually fix changelog
+  * Contributors: ipa-fxm
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Mon, 17 Jul 2017 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.8-1focal) focal; urgency=high
+
+  * added publisher to image flip for providing the inverse inplane rotation to subscribers to the upright image
+  * Contributors: Richard Bormann
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Sun, 09 Oct 2016 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.7-1focal) focal; urgency=high
+
+  * fix remaining issues from #54 <https://github.com/ipa320/cob_perception_common/issues/54>
+  * conversion to package format 2
+  * Contributors: Richard Bormann, ipa-fmw
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Thu, 31 Mar 2016 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.6-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Tue, 16 Jun 2015 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.5-1focal) focal; urgency=high
+
+  * update changelog
+  * Merge branch 'indigo_dev' of github.com:ipa320/cob_perception_common into 320-indigo_dev
+  * added message description
+  * Merge pull request #43 <https://github.com/ipa320/cob_perception_common/issues/43> from ipa320/indigo_release_candidate
+    Indigo release candidate
+  * Merge branch 'indigo_dev' into hydro_dev
+  * catkinizing
+  * eliminating catkin warnings
+  * Merge branch 'hydro_dev' of github.com:rmb-om/cob_perception_common into rmb-om-hydro_dev
+  * Merge branch 'indigo_dev' of https://github.com/ipa-rmb/cob_perception_common into hydro_dev
+  * added skeleton msg
+  * Using standard random number generator, replaced precompiled headers with references to a file within this metapackage. Adapted package description.
+  * Added new messages for people detection
+  * Added new messages for people detection
+  * moved the cob_people_detections_msgs package to cob_perception_common/cob_perception_msgs
+  * Contributors: Florian Weisshardt, Richard Bormann, ipa-jsf, rmb-om
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Tue, 16 Jun 2015 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.4-1focal) focal; urgency=high
+
+  * 0.5.12
+  * update changelog
+  * cleanup changelog
+  * 0.5.11
+  * update changelog
+  * Contributors: Florian Weisshardt
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Tue, 16 Sep 2014 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.3-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Sun, 07 Sep 2014 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.2-1focal) focal; urgency=high
+
+  * increase version number for indigo
+  * 0.5.10
+  * update changelog
+  * downgrade version for hydro
+  * Contributors: Florian Weisshardt
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Sun, 31 Aug 2014 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.1-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Wed, 27 Aug 2014 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.6.0-1focal) focal; urgency=high
+
+  * 0.5.6
+  * 0.5.5
+  * update changelog
+  * 0.5.5
+  * update changelog
+  * Contributors: Florian Weisshardt
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Wed, 27 Aug 2014 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.5.10-1focal) focal; urgency=high
+
+  * downgrade version for hydro
+  * 0.6.1
+  * update changelog
+  * 0.6.0
+  * update changelog
+  * 0.5.5
+  * update changelog
+  * Contributors: Florian Weisshardt
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Thu, 28 Aug 2014 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.5.5-1focal) focal; urgency=high
+
+
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Wed, 27 Aug 2014 22:00:00 -0000
+
+ros-noetic-cob-perception-msgs (0.5.4-1focal) focal; urgency=high
+
+  * unify version number
+  * update changelog
+  * catkinize cob_perception_msgs
+  * convert stack to metapackge, ignore all pacakges within for now
+  * added cob_perception_msgs package
+  * Contributors: Florian Weisshardt, Richard Bormann, ipa-mig
+
+ -- Richard Bormann <rmb@ipa.fhg.de>  Sun, 24 Aug 2014 22:00:00 -0000
+
+
